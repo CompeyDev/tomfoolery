@@ -1,0 +1,10 @@
+[package]
+name = "tomfoolery"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tensorflow = "0.19.1"
+discord_client = { path = "./src/model" }
