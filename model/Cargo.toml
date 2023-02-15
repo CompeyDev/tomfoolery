@@ -1,5 +1,5 @@
 [package]
-name = "discord_client"
+name = "ml_server"
 version = "0.1.0"
 edition = "2021"
 

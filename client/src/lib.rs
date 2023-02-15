@@ -35,13 +35,13 @@ impl EventHandler for Handler {
     }
 
     async fn ready(&self, ctx: Context, client: Ready) {
-        println!("Signed in as {}", client.user.name);
+        println!("{} is ready", client.user.name);
 
         let guild_id = GuildId(
             env::var("DISCORD_GUILD_ID")
-                .expect("GUILD_ID environment variable not found!")
+                .expect("DISCORD_GUILD_ID environment variable not found!")
                 .parse()
-                .expect("GUILD_ID is not of a valid type (integer)"),
+                .expect("DISCORD_GUILD_ID is not of a valid type (integer)"),
         );
 
         let commands = GuildId::set_application_commands(&guild_id, &ctx.http, |commands| {
